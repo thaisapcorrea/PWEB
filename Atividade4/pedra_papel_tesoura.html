@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo Pedra, Papel e Tesoura</title>
+</head>
+<body>
+    <script>    
+
+        do {
+            var usuario = prompt(`Insira um valor entre\n
+                                1 - Pedra
+                                2 - Papel
+                                3 - Tesoura: `);
+            if (usuario === "1") {
+                var esc1 = "Pedra";
+            } else if (usuario === "2") {
+                var esc1 = "Papel";            
+            }else if (usuario === "3") {
+                var esc1 = "Tesoura";
+            }else {
+                alert("Digite um valor valido!");
+            }
+        } while (usuario != "1" && 
+                 usuario != "2" && 
+                 usuario != "3");
+
+        var computador = Math.random() * 3;
+        if (computador <= 1) {
+            var esc2 = "Pedra";
+        } else if (computador <= 2) {
+            var esc2 = "Papel";            
+        }else {
+            var esc2 = "Tesoura";
+        }
+
+        alert("O usuario escolheu " + esc1 + 
+              "\n e o computador escolheu " + esc2);
+
+        if (esc1 == "Pedra"   && esc2 === "Pedra" ||
+            esc1 == "Papel"   && esc2 === "Papel" ||
+            esc1 == "Tesoura" && esc2 === "Tesoura") {
+            alert("O jogo empatou!");
+        } else  if (esc1 == "Pedra" && esc2 == "Tesoura") {
+            alert("O usuario ganhou!");
+        } else  if (esc2 == "Pedra" && esc1 == "Tesoura") {
+            alert("O computador ganhou!");
+
+
+        } else  if (esc1 == "Pedra" && esc2 == "Papel") {
+            alert("O computador ganhou!");
+        } else  if (esc2 == "Pedra" && esc1 == "Papel") {
+            alert("O usuario ganhou!");
+
+
+        } else  if (esc1 == "Tesoura" && esc2 == "Papel") {
+            alert("O usuario ganhou!");
+        } else  if (esc2 == "Tesoura" && esc1 == "Papel") {
+            alert("O computador ganhou!");
+        }
+    </script>    
+</body>
+</html>
