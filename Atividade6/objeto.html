@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio de Objeto</title>
+</head>
+<body>
+    <script>
+        //Usando construtor
+        
+        var Aluno01 = new Object();
+        Aluno01.RA01 = "0030481723046";
+        Aluno01.Nome01 = "Thais 01"        
+
+        alert(Aluno01.RA01);
+        alert(Aluno01.Nome01);
+
+        //Usando forma literal
+        var Aluno02 = {            
+            RA02: "0030481723046",
+            Nome02: "Thais 02",
+        };
+
+        alert(Aluno02.RA02);
+        alert(Aluno02.Nome02);
+
+        var Aluno03 = {};
+        var campoRA = 'RA03';
+        var campoNome = "Nome03";
+        
+        Aluno03 [campoRA] = "0030481723046";
+        Aluno03 [campoNome] = "Thais 03";
+
+        alert(Aluno03.RA03);
+        alert(Aluno03.Nome03);
+        
+    </script>    
+</body>
+</html>
