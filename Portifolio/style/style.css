@@ -5,3 +5,14 @@ h4 {
 body {
     font-family: 'Dancing Script', cursive;
 }
+
+.perfil {
+    border: 10px solid white;
+    position: fixed;
+    
+}
+
+#fundo {
+    position: fixed;
+    width: 100%;
+}
